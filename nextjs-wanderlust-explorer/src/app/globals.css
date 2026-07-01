@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f8fafc;
+  --background: #f3f7fb;
   --foreground: #0f172a;
 }
 
@@ -14,10 +14,31 @@
 
 html {
   background: var(--background);
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
+  background:
+    radial-gradient(circle at 15% 10%, #e0f2fe 0%, transparent 35%),
+    radial-gradient(circle at 85% 20%, #dbeafe 0%, transparent 30%),
+    var(--background);
   color: var(--foreground);
   font-family: var(--font-geist-sans), sans-serif;
+}
+
+a,
+button,
+input,
+select {
+  transition:
+    color 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+::selection {
+  background: #bae6fd;
+  color: #082f49;
 }
